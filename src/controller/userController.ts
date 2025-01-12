@@ -69,11 +69,7 @@ export const userLogin=async(req: Request, res: Response): Promise<void> =>{
 
     const { password, ...userResponse } = findEmail.toObject();
 
-    res.cookie('token', token,
-         { maxAge: 3 * 24 * 60 * 60 * 1000, httpOnly: true,  
-        secure: Boolean(configKeys.production), sameSite: 
-        "none",domain: "kyc-backend-jade.vercel.app"
-         });
+    res.cookie('token', token,{ maxAge: 3 * 24 * 60 * 60 * 1000, httpOnly: true,  secure: true, sameSite: "none"});
     
 
     res.status(200).json({ message: "Login successful",user: userResponse});
