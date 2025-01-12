@@ -6,7 +6,7 @@ import path from "path"
 
 const expressconfig=(app:Application)=>{
     const corsConfig = {
-        origin: 'http://localhost:5173', 
+        origin: '', 
         credentials: true, 
     }
     app.use(cors(corsConfig))
