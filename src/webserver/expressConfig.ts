@@ -8,6 +8,8 @@ const expressconfig=(app:Application)=>{
     const corsConfig = {
         origin: 'https://kyc-frontend-ebon.vercel.app', 
         credentials: true, 
+        methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+        allowedHeaders: ['Content-Type', 'Authorization'],
     }
     app.use(cors(corsConfig))
     app.options('*', cors());
