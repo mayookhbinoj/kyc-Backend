@@ -72,7 +72,7 @@ export const userLogin=async(req: Request, res: Response): Promise<void> =>{
     res.cookie('token', token,
          { maxAge: 3 * 24 * 60 * 60 * 1000, httpOnly: true,  
         secure: Boolean(configKeys.production), sameSite: 
-        "none",domain: "https://kyc-frontend-ebon.vercel.app"
+        "none",domain: "kyc-backend-jade.vercel.app"
          });
     
 
