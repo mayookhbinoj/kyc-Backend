@@ -6,7 +6,7 @@ import path from "path"
 
 const expressconfig=(app:Application)=>{
     const corsConfig = {
-        origin: '', 
+        origin: 'https://kyc-frontend-ebon.vercel.app', 
         credentials: true, 
     }
     app.use(cors(corsConfig))
