@@ -90,7 +90,7 @@ export const kycSubmit = async (req: Request, res: Response, next: NextFunction)
     } else if (!fullName || !idNumber || !aadhaarName) {
       res.status(400).json({ message: 'All fields are required' });
     } else {
-      const file = req.file ? `http://localhost:5001/Uploads/${req.file.filename}` : null;
+      const file = req.file ? `https://kyc-backend-jade.vercel.app/Uploads/${req.file.filename}` : null;
 
       if(!file) {
         res.status(400).json({ message: 'Aadhaar image is required' });
