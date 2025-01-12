@@ -1,9 +1,9 @@
     import expres,{Application} from "express"
     import http from "http"
-    import serverConfig from "./webserver/server"
-    import expressconfig from "./webserver/expressConfig"
-    import connectDB from "./Database/connect"
-    import route from "./route/index"
+    import serverConfig from "./src/webserver/server"
+    import expressconfig from "./src/webserver/expressConfig"
+    import connectDB from "./src/Database/connect"
+    import route from "./src/route/index"
     import dotenv from "dotenv"
     dotenv.config()
 
