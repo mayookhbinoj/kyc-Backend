@@ -12,7 +12,6 @@ const expressconfig=(app:Application)=>{
         allowedHeaders: ['Content-Type', 'Authorization'],
     }
     app.use(cors(corsConfig))
-    app.options('*', cors());
     app.use(express.json())
     app.use(express.urlencoded({extended:true}))
     app.use(morgan("dev"))
